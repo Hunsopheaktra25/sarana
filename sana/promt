@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesline Navigation System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+
+</body>
+ <script>
+        const navToggle = document.getElementById('navToggle');
+        const subjectMenu = document.getElementById('subjectMenu');
+
+        
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            subjectMenu.classList.toggle('active'); 
+        });
+
+        
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !subjectMenu.contains(e.target)) {
+                subjectMenu.classList.remove('active');
+            }
+        });
+    </script>
+</html>
